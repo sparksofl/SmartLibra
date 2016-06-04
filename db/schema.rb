@@ -21,12 +21,8 @@ ActiveRecord::Schema.define(version: 20160604134540) do
     t.integer  "weight"
     t.integer  "radius"
     t.integer  "user_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.string   "pic_file_name"
-    t.string   "pic_content_type"
-    t.integer  "pic_file_size"
-    t.datetime "pic_updated_at"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.string   "pic"
   end
 
@@ -47,12 +43,9 @@ ActiveRecord::Schema.define(version: 20160604134540) do
     t.integer  "device_id"
     t.string   "status"
     t.boolean  "saved"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.string   "pic_file_name"
-    t.string   "pic_content_type"
-    t.integer  "pic_file_size"
-    t.datetime "pic_updated_at"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "pic"
   end
 
   create_table "users", force: :cascade do |t|

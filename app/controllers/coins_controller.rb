@@ -6,7 +6,6 @@ class CoinsController < ApplicationController
   def create
     @coin = Coin.create(coin_params)
     @coin.update_attribute(:user_id, params[:user_id])
-    @coin.update_attribute(:pic, File.open(params[:pic], 'rb'))
     Result.find(params[:coin][:result_id]).update_attribute(:saved, true)
     render json: @coin
   end
@@ -18,6 +17,6 @@ class CoinsController < ApplicationController
   private
 
   def coin_params
-    params.require(:coin).permit(:name, :release_year, :weight, :radius)
+    params.require(:coin).permit(:name, :release_year, :weight, :radius, :pic)
   end
 end

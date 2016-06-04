@@ -11,12 +11,11 @@ class ResultsController < ApplicationController
 
   def create
     @result = Result.create(result_params)
-    @result.update_attribute(:pic, File.open(params[:pic], 'rb'))
   end
 
   private
 
   def result_params
-    params.permit(:name, :release_year, :weight, :radius, :device_id, :status, :saved)
+    params.permit(:name, :release_year, :weight, :radius, :device_id, :status, :saved, :pic)
   end
 end
