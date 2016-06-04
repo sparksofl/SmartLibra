@@ -13,7 +13,7 @@ def generate
             'device_id' => device_id,
             'status' => status(counter),
             'saved' => 'false',
-            'pic' => "app/assets/images/pic#{Random.new.rand(1..3)}.jpg" }
+            'pic' => pics[Random.new.rand(0..2)] }
   res = Net::HTTP.post_form(uri, params)
 end
 
@@ -24,4 +24,11 @@ end
 def status(n)
   statuses = [ 'fake', 'undefined', 'success' ]
   statuses[n]
+end
+
+def pic(n)
+  pics = [ 'http://i1043.photobucket.com/albums/b440/Nikita_Golkin/rare-gold-coin_zpsviuplcku.jpg',
+    'http://i1043.photobucket.com/albums/b440/Nikita_Golkin/_32_zpsvikn8vjf.jpg',
+    'http://i1043.photobucket.com/albums/b440/Nikita_Golkin/3ad4ca2259fbcd58228f6ac1deba4738_zpskkb3zmxd.jpg' ]
+  pics[n]
 end
