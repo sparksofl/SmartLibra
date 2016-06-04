@@ -8,8 +8,8 @@ def generate
   uri = URI('http://calm-temple-20803.herokuapp.com/results')
   params = {'name' => 'coin name',
             'release_year' => time_rand,
-            'weight' => Random.new(10...500),
-            'radius' => Random.new(10...100),
+            'weight' => Random.new.rand(10...500),
+            'radius' => Random.new.rand(10...100),
             'device_id' => device_id,
             'status' => status(counter),
             'saved' => 'false',
