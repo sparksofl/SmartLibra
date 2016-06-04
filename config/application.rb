@@ -32,8 +32,6 @@ module SmartLibra
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
 
-    config.web_console.whitelisted_ips = '192.168.0.31'
-
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'
