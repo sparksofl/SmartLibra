@@ -13,7 +13,7 @@ def generate
             'device_id' => device_id,
             'status' => status(counter),
             'saved' => 'false',
-            'pic' => pics[Random.new.rand(0..2)] }
+            'pic' => pics(Random.new.rand(0..2)) }
   res = Net::HTTP.post_form(uri, params)
 end
 
