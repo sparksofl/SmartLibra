@@ -26,7 +26,7 @@ def status(n)
   statuses[n]
 end
 
-def pic(n)
+def pics(n)
   pics = [ 'http://i1043.photobucket.com/albums/b440/Nikita_Golkin/rare-gold-coin_zpsviuplcku.jpg',
     'http://i1043.photobucket.com/albums/b440/Nikita_Golkin/_32_zpsvikn8vjf.jpg',
     'http://i1043.photobucket.com/albums/b440/Nikita_Golkin/3ad4ca2259fbcd58228f6ac1deba4738_zpskkb3zmxd.jpg' ]
