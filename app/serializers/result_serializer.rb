@@ -15,6 +15,6 @@
 #
 
 class ResultSerializer < ActiveModel::Serializer
-  attributes :id, :name, :release_year, :weight, :radius, :device_id, :status, :saved, :created_at, :pic
+  attributes :id, :name, :release_year, :weight, :radius, :device_id, :status, :saved, :created_at, :pic, :country, :rating, :currency
   belongs_to :device
 end
