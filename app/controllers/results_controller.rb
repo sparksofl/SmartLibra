@@ -16,6 +16,6 @@ class ResultsController < ApplicationController
   private
 
   def result_params
-    params.permit(:name, :release_year, :weight, :radius, :device_id, :status, :saved, :pic)
+    params.permit(:name, :release_year, :weight, :radius, :device_id, :status, :saved, :pic, :country, :rating, :currency)
   end
 end

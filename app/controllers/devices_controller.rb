@@ -10,7 +10,7 @@ class DevicesController < ApplicationController
   end
 
   def create
-    device = Device.create(name: Faker::Company.name, user_id: @current_user.id) unless @current_user.device
+    device = Device.create(name: 'SM-01-PRO', user_id: @current_user.id) unless @current_user.device
     render json: device
   end
 end
