@@ -11,6 +11,7 @@ class ResultsController < ApplicationController
 
   def create
     @result = Result.create(result_params)
+    render json: @result
   end
 
   private
