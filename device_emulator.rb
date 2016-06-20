@@ -253,7 +253,7 @@ def generate
   counter = Random.new.rand(0..2)
   print 'Enter your device id: '
   device_id = gets.chomp.to_s
-  uri = URI('http://192.168.0.40:3000/results')
+  uri = URI('http://fast-fortress-60701/')
   params = {'name' => 'coin name',
             'release_year' => time_rand,
             'weight' => Random.new.rand(10...500),
