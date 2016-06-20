@@ -10,7 +10,7 @@ class ResultsController < ApplicationController
   end
 
   def create
-    @result = Result.create(result_params)
+    @result = Result.create(params)
     puts "PARAMS: #{params.inspect}"
     render json: @result
   end
