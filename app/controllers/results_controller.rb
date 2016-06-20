@@ -11,7 +11,7 @@ class ResultsController < ApplicationController
 
   def create
     @result = Result.create(result_params)
-    puts "PARAMS: #{params}"
+    puts "PARAMS: #{params.inspect}"
     render json: @result
   end
 
